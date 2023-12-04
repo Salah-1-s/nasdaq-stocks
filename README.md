@@ -6,7 +6,7 @@
 
 npm install # install deps
 
-npm run start # logic and pages development
+npm run start # logic and screens development
 
 npm run test # test logic, ui, accessibility
 
