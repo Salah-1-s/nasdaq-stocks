@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Nasdaq",
+    "slug": "nasdaq",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/core/assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/core/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/core/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./src/core/assets/images/favicon.png"
+    }
+  }
+}
