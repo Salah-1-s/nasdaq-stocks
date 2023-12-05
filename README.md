@@ -6,9 +6,9 @@
 
 yarn install # install deps
 
-yarn run start # logic and screens development
+yarn start # logic and screens development
 
-yarn run test # test logic, ui, accessibility
+yarn test # test logic, ui, accessibility
 
 ```
 
