@@ -4,11 +4,11 @@
 
 ```
 
-npm install # install deps
+yarn install # install deps
 
-npm run start # logic and screens development
+yarn run start # logic and screens development
 
-npm run test # test logic, ui, accessibility
+yarn run test # test logic, ui, accessibility
 
 ```
 
