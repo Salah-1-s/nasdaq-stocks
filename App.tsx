@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, SafeAreaView } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import SafeAreaView from "react-native-safe-area-view";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
 import ExploreScreen from "./src/screens/explore";
 import Navbar from "./src/core/components/Navbar";
@@ -12,24 +14,26 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <SafeAreaView style={styles.container}>
-        <Navbar />
+      <SafeAreaProvider>
+        <SafeAreaView style={styles.container}>
+          <Navbar />
 
-        <View style={styles.wrapper}>
-          <Stack.Navigator>
-            <Stack.Screen
-              name="Explore"
-              component={ExploreScreen}
-              options={{
-                headerShown: false,
-                cardStyle: { backgroundColor: Colors.navy100 },
-              }}
-            />
-            <Stack.Screen name="Details" component={DetailsScreen} />
-          </Stack.Navigator>
-          <StatusBar style="auto" />
-        </View>
-      </SafeAreaView>
+          <View style={styles.wrapper}>
+            <Stack.Navigator>
+              <Stack.Screen
+                name="Explore"
+                component={ExploreScreen}
+                options={{
+                  headerShown: false,
+                  cardStyle: { backgroundColor: Colors.navy100 },
+                }}
+              />
+              <Stack.Screen name="Details" component={DetailsScreen} />
+            </Stack.Navigator>
+            <StatusBar style="auto" />
+          </View>
+        </SafeAreaView>
+      </SafeAreaProvider>
     </NavigationContainer>
   );
 }

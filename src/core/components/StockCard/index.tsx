@@ -1,4 +1,4 @@
-import { Text, Image, TouchableOpacity } from "react-native";
+import { Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StockType } from "../../types/stock.types";
 
@@ -12,7 +12,7 @@ export default function StockCard({ stock }: StockCardProps) {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity
+    <Pressable
       style={stockCardStyles.container}
       onPress={() => navigation.navigate("Details" as never)}
     >
@@ -23,6 +23,6 @@ export default function StockCard({ stock }: StockCardProps) {
       />
       <Text style={stockCardStyles.ticker}>{stock.ticker}</Text>
       <Text style={stockCardStyles.name}>{stock.name}</Text>
-    </TouchableOpacity>
+    </Pressable>
   );
 }
