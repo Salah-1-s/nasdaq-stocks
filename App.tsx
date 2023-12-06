@@ -3,13 +3,13 @@ import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import SafeAreaView from "react-native-safe-area-view";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ExploreScreen from "./src/screens/explore";
 import Navbar from "./src/core/components/Navbar";
 import { Colors } from "./src/core/styles/settings/colors";
 import DetailsScreen from "./src/screens/details";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -25,7 +25,7 @@ export default function App() {
                 component={ExploreScreen}
                 options={{
                   headerShown: false,
-                  cardStyle: { backgroundColor: Colors.navy100 },
+                  contentStyle: { backgroundColor: Colors.navy100 },
                 }}
               />
               <Stack.Screen name="Details" component={DetailsScreen} />
